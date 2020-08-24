@@ -1,4 +1,6 @@
 <?php 
+@ini_set('zlib.output_compression', 0);
+@ini_set('implicit_flush', 1);
 error_reporting(E_ERROR | E_PARSE);
 $file = fopen("links.txt", "r");
 $members = array();
@@ -22,10 +24,10 @@ foreach ($sources as $source) {
       $name = $attr->nodeName;
       $value = $attr->nodeValue;
       echo "$value<br />";
-	 
+      ob_end_flush();
     }
 }
- flush();
+ ob_implicit_flush(1);
 }
 
 ?>
