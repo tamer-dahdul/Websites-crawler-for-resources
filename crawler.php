@@ -1,5 +1,6 @@
 <?php
 //crawler
+//crawler2
 @ini_set('zlib.output_compression', 0);
 @ini_set('implicit_flush', 1);
 error_reporting(E_ERROR | E_PARSE);
