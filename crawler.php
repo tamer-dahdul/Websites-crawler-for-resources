@@ -1,10 +1,10 @@
-<?php 
+<?php
+//crawler
 @ini_set('zlib.output_compression', 0);
 @ini_set('implicit_flush', 1);
 error_reporting(E_ERROR | E_PARSE);
 $file = fopen("links.txt", "r");
 $members = array();
-
 while (!feof($file)) {
    $members[] = fgets($file);
 }
